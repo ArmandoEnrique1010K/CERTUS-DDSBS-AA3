@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "080b5353-b7a1-4696-acfa-7ad018744ec7",
+		"name": "ciclo 5 -servicios - evidencia 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20835750"
+	},
+	"item": [
+		{
+			"name": "ms-alumno",
+			"item": [
+				{
+					"name": "readAllAlumno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno"
+					},
+					"response": []
+				},
+				{
+					"name": "readAlumno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno/2"
+					},
+					"response": []
+				},
+				{
+					"name": "createAlumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombres\": \"Nombre1\",\r\n    \"apellidos\": \"Nombre2\",\r\n    \"sexo\": \"M\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8086/v1/alumno"
+					},
+					"response": []
+				},
+				{
+					"name": "updateAlumno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"nombres\": \"Test 2223\",\r\n    \"apellidos\": \"Test 3333\",\r\n    \"sexo\": \"M\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8086/v1/alumno"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAlumno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno/30"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCursoAlumno (separado)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno/all-curso"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAlumnoCurso (unidos)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno-curso"
+					},
+					"response": []
+				},
+				{
+					"name": "getAlumnoCurso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8086/v1/alumno-curso/1"
+					},
+					"response": []
+				},
+				{
+					"name": "createAlumnoCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAlumno\": 6,\r\n    \"idCurso\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8086/v1/alumno-curso/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-curso",
+			"item": [
+				{
+					"name": "readAllCurso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso"
+					},
+					"response": []
+				},
+				{
+					"name": "readCurso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso/2"
+					},
+					"response": []
+				},
+				{
+					"name": "createCurso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Diseño de Soluciones Big Data\",\r\n    \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8084/v1/curso"
+					},
+					"response": []
+				},
+				{
+					"name": "updateCurso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"descripcion\": \"Diseño de pruebas de software\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8084/v1/curso"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCurso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso/30"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProfesorCurso (separados)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso/all-profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCursoProfesor (unidos)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso-profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "getCursoProfesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8084/v1/curso-profesor/3"
+					},
+					"response": []
+				},
+				{
+					"name": "createCursoProfesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCurso\": 3,\r\n    \"idProfesor\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8084/v1/curso-profesor"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-profesor",
+			"item": [
+				{
+					"name": "readAllProfesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/v1/profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "readProfesor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/v1/profesor/2"
+					},
+					"response": []
+				},
+				{
+					"name": "createProfesor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Profesor\",\r\n    \"apellidos\": \"Test\",\r\n    \"sexo\": \"M\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/v1/profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"nombre\": \"Marco\",\r\n    \"apellidos\": \"Ortiz\",\r\n    \"sexo\": \"M\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/v1/profesor"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfesor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/v1/profesor/30"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
